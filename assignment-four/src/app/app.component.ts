@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment-four';
+
+  evenGames: number[] = [];
+  oddGames: number[] = [];
+
+
+  gameStarted(index) {
+    if (index % 2 == 0) {
+      this.evenGames.push(index);
+    } else {
+      this.oddGames.push(index);
+    }
+  }
+
 }
